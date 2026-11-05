@@ -40,6 +40,6 @@ Use `npm run build` as the build command and `out` as the output directory if Ve
 - Hero industry labels and metrics: `src/content/onePage.ts`; hero layout: `src/app/one-page.css`. The earlier orbital carousel and its concept images remain in the repository but are no longer displayed on the homepage.
 - SVG assets: `public/brand/`, `public/og.svg`, and `src/app/icon.svg`. The social sharing raster is `public/og.png`; regenerate it from `public/og.svg` after changing the design.
 
-The two confirmed founder records and GitHub links are in `src/content/config.ts`. Thaingern's profile uses the supplied photo; Punnawit's uses initials until an approved photo is available. Keep English and Thai content in sync when adding sections or changing labels.
+The two confirmed founder records, photos, and GitHub links are in `src/content/config.ts`. Keep English and Thai content in sync when adding sections or changing labels.
 
 See `CONTENT_NEEDED.md` for optional material that would strengthen the site.
