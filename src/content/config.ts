@@ -15,8 +15,8 @@ export const site = {
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@philodox.site",
   social: {} as Record<string, string>,
   founders: [
-    { id: "punnawit", name: "Punnawit Silapasert", initials: "PS", github: "https://github.com/chokoon123", education: { en: "Data Science and Innovation · College of Innovation, Thammasat University", th: "วิทยาศาสตร์ข้อมูลและนวัตกรรม · วิทยาลัยนวัตกรรม มหาวิทยาลัยธรรมศาสตร์" } },
-    { id: "thaingern", name: "Thaingern Pinta", initials: "TP", github: "https://github.com/thaingern001", education: { en: "Computer Engineering · Kasetsart University, Bangkhen Campus", th: "วิศวกรรมคอมพิวเตอร์ · มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน" } },
+    { id: "punnawit", name: "Punnawit Silapasert", initials: "PS", image: null, github: "https://github.com/chokoon123", education: { en: "Data Science and Innovation · College of Innovation, Thammasat University", th: "วิทยาศาสตร์ข้อมูลและนวัตกรรม · วิทยาลัยนวัตกรรม มหาวิทยาลัยธรรมศาสตร์" } },
+    { id: "thaingern", name: "Thaingern Pinta", initials: "TP", image: "/images/founders/thaingern.png", github: "https://github.com/thaingern001", education: { en: "Computer Engineering · Kasetsart University, Bangkhen Campus", th: "วิศวกรรมคอมพิวเตอร์ · มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน" } },
   ],
 };
 
