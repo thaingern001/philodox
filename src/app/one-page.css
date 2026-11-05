@@ -46,7 +46,7 @@ main section[id],.one-capabilities article[id]{scroll-margin-top:100px;outline:n
 .scope-panel p{font-size:15px;line-height:1.65;color:#3f4b5b;margin:0}
 .scope-panel a,.ventures-one a{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:650;border-bottom:1px solid currentColor;padding-bottom:7px;margin-top:20px}
 .scope-panel a:hover,.ventures-one a:hover{color:var(--accent)}
-.approach-one{color:#fff;padding-block:68px}
+.approach-one{background:#0d1420;color:#fff;padding-block:68px}
 .approach-one .one-heading{border-color:#697482}
 .approach-one .one-heading p,.approach-note{color:#b5bfce}
 .approach-one .steps-grid{margin-top:38px}
