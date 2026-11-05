@@ -19,13 +19,13 @@ export const copy: Record<Locale, Copy> = {
   en: {
     nav: { home: "Home", services: "Services", approach: "Approach", ventures: "Ventures", about: "About", contact: "Contact" },
     langLabel: "Language", skip: "Skip to content", menu: "Open menu", close: "Close menu",
-    common: { eyebrow: "Independent engineering & venture studio", explore: "Explore Services", talk: "Let's Talk", learn: "Learn more", allServices: "All services", direction: "Explore our direction", about: "About Philodox", start: "Start a conversation", contactCta: "Have a challenge worth solving?", contactBody: "Whether you're exploring a technical solution, developing a new idea, or considering a partnership, we'd be glad to start a conversation.", footer: "Engineering meaningful solutions. Exploring what comes next.", interest: "Areas of interest", possible: "Potential deliverables" },
+    common: { eyebrow: "Independent Engineering & Innovation Studio", explore: "Explore Services", talk: "Let's Talk", learn: "Learn more", allServices: "All services", direction: "Explore our direction", about: "About Philodox", start: "Start a conversation", contactCta: "Have a challenge worth solving?", contactBody: "Whether you're exploring a technical solution, developing a new idea, or considering a partnership, we'd be glad to start a conversation.", footer: "Engineering meaningful solutions. Exploring what comes next.", interest: "Areas of interest", possible: "Potential deliverables" },
     meta: {
       home: { title: "Tailored Software, AI & Data Solutions — Philodox", description: "Philodox designs and implements software, AI integrations, data tools, and digital products tailored to each business challenge." },
       services: { title: "Engineering & Consulting Services — Philodox", description: "Explore software engineering, applied AI, data analytics, technology consulting, and product prototyping with Philodox." },
       approach: { title: "Our Approach — Philodox", description: "How Philodox thinks through problems: understand context, explore options, build with care, and refine through evidence." },
       ventures: { title: "Venture Exploration — Philodox", description: "Discover Philodox's direction for exploring ideas, prototyping possibilities, and validating potential new products." },
-      about: { title: "About Philodox", description: "Meet the thinking behind Philodox, an emerging independent engineering and venture studio founded by a small team." },
+      about: { title: "About Philodox", description: "Meet Philodox, an independent engineering and innovation studio founded by Punnawit Silapasert and Thaingern Pinta." },
       contact: { title: "Contact Philodox", description: "Start a conversation about engineering services, AI and data, product collaboration, or venture exploration." },
     },
     home: {
@@ -38,8 +38,8 @@ export const copy: Record<Locale, Copy> = {
         { title: "Flexible Thinking", text: "Solutions shaped around the problem, not a fixed technology." },
       ],
       approachHeading: "A thoughtful approach to building what matters.", approachIntro: "Our intended way of working keeps the problem in focus and makes room to learn along the way.",
-      ventureHeading: "Beyond today's challenges.", ventureText: "Alongside client work, we are interested in original ideas and emerging opportunities. We explore carefully, prototype early, and look for evidence before committing to a direction.",
-      aboutHeading: "Independent by design. Curious by nature.", aboutText: "Philodox is an emerging independent engineering and venture studio. We connect technical thinking with practical execution while staying open to new ideas and long-term opportunities.",
+      ventureHeading: "Beyond today's challenges.", ventureText: "We explore original ideas and emerging opportunities, testing feasibility before deciding what to develop.",
+      aboutHeading: "Independent by design. Curious by nature.", aboutText: "Philodox brings engineering discipline and curiosity together to build useful solutions and explore what comes next.",
     },
     services: {
       hero: "Engineering for the problem in front of you.", intro: "Technical work should make complexity useful. We bring engineering, analysis, and product thinking together to shape solutions around real needs.",
@@ -89,18 +89,18 @@ export const copy: Record<Locale, Copy> = {
       hero: "Independent by design. Curious by nature.", intro: "Philodox is an emerging engineering and venture studio shaped by a small team and a conviction that good ideas deserve careful testing and capable execution.",
       philosophyHeading: "Ideas are beginnings, not conclusions.", philosophyText: "Our name invites a useful tension: to care about ideas while staying willing to challenge them. We value curiosity, first-principles thinking, experimentation, and the discipline to learn from evidence.",
       whyHeading: "Why we build", whyText: "We are drawn to work where technology can make a practical difference: clearer processes, more useful tools, and new possibilities that have been tested in the real world.",
-      teamHeading: "A focused founding team", teamText: "Philodox currently consists of two founders. We work from a small-team mindset: close collaboration, direct thinking, and responsibility for the details.", teamNote: "Founder profiles will be added when details are ready to share.",
+      teamHeading: "Co-founders", teamText: "Philodox was founded by Punnawit Silapasert and Thaingern Pinta, with backgrounds in Data Science and Innovation and Computer Engineering.", teamNote: "Founder details are presented on the main page.",
       futureHeading: "Looking forward", futureText: "Our direction brings together engineering services and the exploration of original products. Both ask the same thing of us: stay curious, work rigorously, and make ideas useful.",
     },
     contact: {
       hero: "Let's begin with a conversation.", intro: "Tell us about a challenge, an idea, or an opportunity you are considering. A clear starting question is enough.", topicsHeading: "What we can discuss", topics: ["Engineering services", "AI and data consulting", "Product collaboration", "Venture partnership", "General inquiries"],
-      actionHeading: "Reach Philodox", actionText: "Share the context, what you hope to achieve, and any constraints you already know about.", emailLabel: "Email us", fallbackHeading: "Contact details are being prepared", fallbackText: "A public contact destination has not yet been configured. Please check back soon, or use an existing introduction channel if you already have one.", configNote: "For the site owner: set NEXT_PUBLIC_CONTACT_EMAIL to enable the email link.",
+      actionHeading: "Reach Philodox", actionText: "Share the context, what you hope to achieve, and any constraints you already know about.", emailLabel: "Email us", fallbackHeading: "Reach Philodox", fallbackText: "Email us at contact@philodox.site.", configNote: "",
     },
   },
   th: {
     nav: { home: "หน้าแรก", services: "บริการ", approach: "แนวทาง", ventures: "การสร้างธุรกิจ", about: "เกี่ยวกับเรา", contact: "ติดต่อ" },
     langLabel: "ภาษา", skip: "ข้ามไปยังเนื้อหา", menu: "เปิดเมนู", close: "ปิดเมนู",
-    common: { eyebrow: "สตูดิโอวิศวกรรมและพัฒนาธุรกิจอิสระ", explore: "สำรวจบริการ", talk: "พูดคุยกับเรา", learn: "อ่านเพิ่มเติม", allServices: "ดูบริการทั้งหมด", direction: "สำรวจแนวคิดของเรา", about: "รู้จัก Philodox", start: "เริ่มต้นพูดคุย", contactCta: "มีโจทย์ที่อยากแก้ไปด้วยกันไหม", contactBody: "ไม่ว่าคุณกำลังมองหาทางออกทางเทคนิค พัฒนาแนวคิดใหม่ หรือหาโอกาสร่วมมือ เรายินดีเริ่มต้นด้วยการพูดคุย", footer: "พัฒนาทางออกที่มีความหมาย พร้อมสำรวจความเป็นไปได้ใหม่", interest: "ประเด็นที่สนใจ", possible: "ผลงานที่อาจส่งมอบ" },
+    common: { eyebrow: "สตูดิโอวิศวกรรมและนวัตกรรมอิสระ", explore: "สำรวจบริการ", talk: "พูดคุยกับเรา", learn: "อ่านเพิ่มเติม", allServices: "ดูบริการทั้งหมด", direction: "สำรวจแนวคิดของเรา", about: "รู้จัก Philodox", start: "เริ่มต้นพูดคุย", contactCta: "มีโจทย์ที่อยากแก้ไปด้วยกันไหม", contactBody: "ไม่ว่าคุณกำลังมองหาทางออกทางเทคนิค พัฒนาแนวคิดใหม่ หรือหาโอกาสร่วมมือ เรายินดีเริ่มต้นด้วยการพูดคุย", footer: "พัฒนาทางออกที่มีความหมาย พร้อมสำรวจความเป็นไปได้ใหม่", interest: "ประเด็นที่สนใจ", possible: "ผลงานที่อาจส่งมอบ" },
     meta: {
       home: { title: "โซลูชันซอฟต์แวร์ AI และข้อมูลที่ออกแบบตามโจทย์ — Philodox", description: "Philodox ออกแบบและพัฒนาซอฟต์แวร์ การผสาน AI เครื่องมือข้อมูล และผลิตภัณฑ์ดิจิทัลให้เหมาะกับโจทย์ของแต่ละธุรกิจ" },
       services: { title: "บริการวิศวกรรมและที่ปรึกษา — Philodox", description: "บริการด้านซอฟต์แวร์ AI การวิเคราะห์ข้อมูล ที่ปรึกษาเทคโนโลยี และการสร้างต้นแบบผลิตภัณฑ์จาก Philodox" },
@@ -119,8 +119,8 @@ export const copy: Record<Locale, Copy> = {
         { title: "คิดได้ยืดหยุ่น", text: "เลือกทางออกตามโจทย์ ไม่ยึดติดกับเทคโนโลยีชุดเดียว" },
       ],
       approachHeading: "คิดอย่างรอบคอบ สร้างสิ่งที่สำคัญ", approachIntro: "แนวทางที่เราตั้งใจใช้ในการทำงานช่วยให้มองเห็นโจทย์ชัด และเปิดพื้นที่ให้เรียนรู้ระหว่างทาง",
-      ventureHeading: "มองไกลกว่าโจทย์วันนี้", ventureText: "นอกจากงานบริการ เราสนใจแนวคิดของตนเองและโอกาสใหม่ ๆ โดยเริ่มจากการสำรวจ สร้างต้นแบบ และหาหลักฐานก่อนตัดสินใจเดินหน้าต่อ",
-      aboutHeading: "อิสระในการคิด ใฝ่รู้โดยธรรมชาติ", aboutText: "Philodox เป็นสตูดิโอวิศวกรรมและพัฒนาธุรกิจอิสระที่กำลังก่อตัว เราเชื่อมการคิดเชิงเทคนิคกับการลงมือทำจริง พร้อมเปิดรับแนวคิดและโอกาสในระยะยาว",
+      ventureHeading: "มองไกลกว่าโจทย์วันนี้", ventureText: "เราสำรวจแนวคิดและโอกาสใหม่ ทดสอบความเป็นไปได้ก่อนตัดสินใจพัฒนาต่อ",
+      aboutHeading: "อิสระในการคิด ใฝ่รู้โดยธรรมชาติ", aboutText: "Philodox ผสานความรอบคอบทางวิศวกรรมกับความใฝ่รู้ เพื่อสร้างทางออกที่ใช้ได้จริงและสำรวจความเป็นไปได้ใหม่",
     },
     services: {
       hero: "งานวิศวกรรมที่เริ่มจากโจทย์ของคุณ", intro: "งานเทคนิคที่ดีควรช่วยให้เรื่องซับซ้อนจัดการได้ เราผสานวิศวกรรม การวิเคราะห์ และมุมมองด้านผลิตภัณฑ์เพื่อออกแบบทางออกตามความต้องการจริง",
@@ -170,12 +170,12 @@ export const copy: Record<Locale, Copy> = {
       hero: "อิสระในการคิด ใฝ่รู้โดยธรรมชาติ", intro: "Philodox เป็นสตูดิโอวิศวกรรมและพัฒนาธุรกิจที่กำลังก่อตัวจากทีมเล็ก ๆ ด้วยความเชื่อว่าแนวคิดที่ดีควรผ่านการทดสอบอย่างรอบคอบและลงมือทำอย่างมีคุณภาพ",
       philosophyHeading: "ความคิดคือจุดเริ่มต้น ไม่ใช่ข้อสรุป", philosophyText: "ชื่อของเราชวนให้รักษาสมดุลระหว่างการเห็นคุณค่าในแนวคิดกับความพร้อมที่จะตั้งคำถาม เราให้ความสำคัญกับความใฝ่รู้ การคิดจากหลักการพื้นฐาน การทดลอง และการเรียนรู้จากหลักฐาน",
       whyHeading: "ทำไมเราจึงสร้าง", whyText: "เราสนใจงานที่เทคโนโลยีสร้างความต่างได้จริง ไม่ว่าจะเป็นกระบวนการที่ชัดขึ้น เครื่องมือที่ใช้ประโยชน์ได้มากขึ้น หรือความเป็นไปได้ใหม่ที่ผ่านการทดสอบในโลกจริง",
-      teamHeading: "ทีมผู้ก่อตั้งที่ทำงานใกล้ชิด", teamText: "ปัจจุบัน Philodox มีผู้ก่อตั้งสองคน เราทำงานแบบทีมเล็กที่ร่วมมือกันใกล้ชิด คิดตรงไปตรงมา และรับผิดชอบในรายละเอียด", teamNote: "ข้อมูลผู้ก่อตั้งจะเพิ่มเติมเมื่อพร้อมเผยแพร่",
+      teamHeading: "ผู้ร่วมก่อตั้ง", teamText: "Philodox ก่อตั้งโดย Punnawit Silapasert และ Thaingern Pinta ซึ่งมีพื้นฐานด้านวิทยาศาสตร์ข้อมูลและนวัตกรรม และวิศวกรรมคอมพิวเตอร์", teamNote: "ดูข้อมูลผู้ก่อตั้งได้ที่หน้าหลัก",
       futureHeading: "มองไปข้างหน้า", futureText: "ทิศทางของเราผสานงานบริการวิศวกรรมกับการสำรวจผลิตภัณฑ์ของตนเอง ทั้งสองด้านต้องอาศัยสิ่งเดียวกัน: ความใฝ่รู้ ความรอบคอบ และการทำให้ความคิดใช้ประโยชน์ได้",
     },
     contact: {
       hero: "เริ่มต้นด้วยการพูดคุย", intro: "เล่าโจทย์ แนวคิด หรือโอกาสที่คุณกำลังพิจารณาให้เราฟัง แค่คำถามตั้งต้นที่ชัดเจนก็เพียงพอ", topicsHeading: "หัวข้อที่พูดคุยได้", topics: ["บริการวิศวกรรม", "ที่ปรึกษา AI และข้อมูล", "ร่วมพัฒนาผลิตภัณฑ์", "ร่วมสำรวจธุรกิจใหม่", "เรื่องทั่วไป"],
-      actionHeading: "ติดต่อ Philodox", actionText: "บอกบริบท สิ่งที่คุณอยากให้เกิดขึ้น และข้อจำกัดที่ทราบในตอนนี้", emailLabel: "ส่งอีเมลถึงเรา", fallbackHeading: "กำลังเตรียมช่องทางติดต่อ", fallbackText: "ขณะนี้ยังไม่ได้ตั้งค่าช่องทางติดต่อสาธารณะ โปรดกลับมาตรวจสอบอีกครั้ง หรือใช้ช่องทางแนะนำตัวที่คุณมีอยู่แล้ว", configNote: "สำหรับเจ้าของเว็บไซต์: ตั้งค่า NEXT_PUBLIC_CONTACT_EMAIL เพื่อเปิดลิงก์อีเมล",
+      actionHeading: "ติดต่อ Philodox", actionText: "บอกบริบท สิ่งที่คุณอยากให้เกิดขึ้น และข้อจำกัดที่ทราบในตอนนี้", emailLabel: "ส่งอีเมลถึงเรา", fallbackHeading: "ติดต่อ Philodox", fallbackText: "ส่งอีเมลถึงเราที่ contact@philodox.site", configNote: "",
     },
   },
 };

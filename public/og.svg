@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none"><rect width="1200" height="630" fill="#F5F4F0"/><path d="M0 510h1200M80 0v630M1120 0v630" stroke="#D9DADD"/><circle cx="880" cy="300" r="220" stroke="#B7BDC7"/><circle cx="880" cy="300" r="140" stroke="#4865E8"/><path d="M650 300h460M880 70v460" stroke="#B7BDC7"/><circle cx="880" cy="300" r="21" fill="#4865E8"/><text x="80" y="150" fill="#111318" font-family="Arial,sans-serif" font-size="48" font-weight="700" letter-spacing="-3">philodox<tspan fill="#4865E8">.</tspan></text><text x="80" y="318" fill="#111318" font-family="Arial,sans-serif" font-size="76" font-weight="600" letter-spacing="-4">From Thought</text><text x="80" y="406" fill="#111318" font-family="Arial,sans-serif" font-size="76" font-weight="600" letter-spacing="-4">to Impact.</text><text x="80" y="562" fill="#64707D" font-family="monospace" font-size="16" letter-spacing="2">INDEPENDENT ENGINEERING &amp; VENTURE STUDIO</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#080B11"/>
+  <circle cx="600" cy="316" r="350" stroke="#344470" opacity=".55"/>
+  <circle cx="600" cy="316" r="272" stroke="#344470" opacity=".4"/>
+  <circle cx="600" cy="316" r="189" stroke="#344470" opacity=".24"/>
+  <text x="80" y="95" fill="#F5F4F0" font-family="Arial,sans-serif" font-size="43" font-weight="700" letter-spacing="-3">philodox<tspan fill="#7F99FF">.</tspan></text>
+  <path d="M80 123h1040" stroke="#263149"/>
+  <text x="80" y="190" fill="#9FB2E4" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="3">INDEPENDENT ENGINEERING &amp; INNOVATION STUDIO</text>
+  <text x="80" y="303" fill="#F5F4F0" font-family="Arial,sans-serif" font-size="73" font-weight="700" letter-spacing="-4">Built with teams</text>
+  <text x="80" y="383" fill="#F5F4F0" font-family="Arial,sans-serif" font-size="73" font-weight="700" letter-spacing="-4">across industries.</text>
+  <text x="80" y="457" fill="#B9C4D8" font-family="Arial,sans-serif" font-size="24">Software · AI · Data · Product</text>
+  <path d="M80 513h1040" stroke="#263149"/>
+  <text x="80" y="563" fill="#8AA2FF" font-family="Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="1">FROM THOUGHT TO IMPACT.</text>
+  <text x="1120" y="563" fill="#AAB5CA" font-family="Arial,sans-serif" font-size="18" text-anchor="end">philodox.site</text>
+</svg>

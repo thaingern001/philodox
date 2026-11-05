@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
 import { locales, type Locale } from "@/content/config";
 import "../globals.css";
+import "../one-page.css";
 
 export function generateStaticParams() { return locales.map(locale => ({ locale })); }
 export const dynamicParams = false;

@@ -1,0 +1,27 @@
+import type { Locale } from "./config";
+
+export const onePage: Record<Locale, {
+  heroEyebrow: string; heroTitle: string; heroIntro: string; heroClients: string; heroAreas: string; heroAreasLabel: string; heroCta: string; heroSecondary: string; industries: string[];
+  servicesTitle: string; servicesIntro: string; capabilities: string; scopeTitle: string; scopeBody: string; serviceCta: string;
+  approachTitle: string; approachIntro: string; approachNote: string;
+  aboutTitle: string; aboutIntro: string; philosophyTitle: string; philosophyBody: string; foundersTitle: string; founderRole: string; educationLabel: string;
+  venturesTitle: string; venturesBody: string; venturesNote: string;
+  contactTitle: string; contactBody: string; emailLabel: string; githubLabel: string;
+}> = {
+  en: {
+    heroEyebrow: "Independent Engineering & Innovation Studio", heroTitle: "Built with teams across industries.", heroIntro: "We turn complex requirements into tailored software, AI, data, and product solutions.", heroClients: "Clients on major projects", heroAreas: "Areas of experience", heroAreasLabel: "Where we've worked", heroCta: "Start a conversation", heroSecondary: "Explore services", industries: ["Agriculture", "Education", "Content AI", "Social Listening", "Real Estate", "Healthcare", "Pet Healthcare"],
+    servicesTitle: "What we can build together.", servicesIntro: "Five connected capabilities, combined to fit your project.", capabilities: "Selected capabilities", scopeTitle: "Flexible Scope. Built Around Your Needs.", scopeBody: "We work project by project. Some engagements cover a solution from discovery through implementation; others focus on one technical challenge. We begin by understanding your requirements and assessing feasibility, then agree on scope, timeline, and deliverables together.", serviceCta: "Have a project in mind? Let's discuss what's possible.",
+    approachTitle: "A clear path from question to outcome.", approachIntro: "We adapt the depth of discovery and delivery to each challenge while keeping decisions practical and transparent.", approachNote: "Start with a conversation. Define the problem, assess the options, and agree on the right next step.",
+    aboutTitle: "Independent Engineering & Innovation Studio.", aboutIntro: "Philodox brings software engineering, data, AI, and product thinking together to solve practical challenges. We work directly with clients and tailor each engagement to its context.", philosophyTitle: "Ideas deserve testing.", philosophyBody: "We value curiosity and sound engineering in equal measure: question assumptions, choose tools for their fit, and refine solutions through evidence.", foundersTitle: "Co-founders", founderRole: "Co-Founder", educationLabel: "Education",
+    venturesTitle: "Exploring what comes next.", venturesBody: "Alongside client work, we explore original product ideas and test their usefulness and feasibility before deciding what to develop.", venturesNote: "An area of exploration, not an announced product portfolio.",
+    contactTitle: "Let's build something useful.", contactBody: "Tell us about your challenge, idea, or project. A short description is enough to start a conversation.", emailLabel: "Email Philodox", githubLabel: "GitHub profile",
+  },
+  th: {
+    heroEyebrow: "สตูดิโอวิศวกรรมและนวัตกรรมอิสระ", heroTitle: "พัฒนาเทคโนโลยีข้ามอุตสาหกรรม ให้ตรงโจทย์จริง", heroIntro: "เราเปลี่ยนความต้องการที่ซับซ้อนเป็นซอฟต์แวร์ โซลูชัน AI งานข้อมูล และผลิตภัณฑ์ที่ออกแบบเฉพาะ", heroClients: "ลูกค้าจากโครงการขนาดใหญ่", heroAreas: "สายงานที่เคยทำ", heroAreasLabel: "ประสบการณ์จากหลากหลายโจทย์", heroCta: "เริ่มพูดคุย", heroSecondary: "ดูบริการ", industries: ["เกษตรกรรม", "การศึกษา", "Content AI", "Social Listening", "อสังหาริมทรัพย์", "สุขภาพ", "สุขภาพสัตว์เลี้ยง"],
+    servicesTitle: "บริการที่ออกแบบตามโจทย์ของคุณ", servicesIntro: "ความสามารถ 5 ด้านที่นำมาผสานกันได้ตามความต้องการของแต่ละโครงการ", capabilities: "ขอบเขตงานที่ทำได้", scopeTitle: "ยืดหยุ่นตามโจทย์ ออกแบบขอบเขตงานร่วมกัน", scopeBody: "เราทำงานเป็นรายโครงการ โดยอาจดูแลตั้งแต่ทำความเข้าใจโจทย์จนถึงพัฒนาระบบ หรือรับผิดชอบเฉพาะส่วนที่ต้องการ เริ่มจากพูดคุยความต้องการ ประเมินความเป็นไปได้ แล้วตกลงขอบเขต ระยะเวลา และสิ่งที่จะส่งมอบร่วมกัน", serviceCta: "มีไอเดียหรือโจทย์ที่อยากแก้? มาคุยกันได้เลย",
+    approachTitle: "จากโจทย์สู่ผลลัพธ์อย่างเป็นขั้นตอน", approachIntro: "เราเลือกวิธีทำงานให้เหมาะกับแต่ละโจทย์ โดยอธิบายทางเลือกและตัดสินใจร่วมกันอย่างชัดเจน", approachNote: "เริ่มจากการพูดคุย ทำความเข้าใจปัญหา ประเมินทางเลือก และกำหนดขั้นตอนถัดไปที่เหมาะสม",
+    aboutTitle: "สตูดิโอวิศวกรรมและนวัตกรรมอิสระ", aboutIntro: "Philodox ผสานงานพัฒนาซอฟต์แวร์ ข้อมูล AI และการคิดเชิงผลิตภัณฑ์ เพื่อแก้โจทย์ที่ใช้ได้จริง เราทำงานใกล้ชิดกับลูกค้าและออกแบบการร่วมงานให้เหมาะกับบริบท", philosophyTitle: "ไอเดียที่ดีต้องผ่านการทดสอบ", philosophyBody: "เราให้ความสำคัญกับความสงสัยใคร่รู้และหลักวิศวกรรม ตั้งคำถามกับสมมติฐาน เลือกเทคโนโลยีให้เหมาะกับงาน และปรับปรุงจากหลักฐานที่ได้", foundersTitle: "ผู้ร่วมก่อตั้ง", founderRole: "ผู้ร่วมก่อตั้ง", educationLabel: "การศึกษา",
+    venturesTitle: "สำรวจความเป็นไปได้ใหม่", venturesBody: "นอกจากงานลูกค้า เรายังสำรวจแนวคิดผลิตภัณฑ์ของตัวเอง และทดสอบประโยชน์กับความเป็นไปได้ก่อนตัดสินใจพัฒนาต่อ", venturesNote: "เป็นแนวทางที่กำลังสำรวจ ยังไม่ใช่ผลิตภัณฑ์ที่เปิดตัวแล้ว",
+    contactTitle: "มาสร้างสิ่งที่ใช้ได้จริงด้วยกัน", contactBody: "เล่าโจทย์ ไอเดีย หรือโครงการของคุณให้เราฟัง เพียงรายละเอียดสั้น ๆ ก็เริ่มต้นพูดคุยกันได้", emailLabel: "อีเมลหา Philodox", githubLabel: "โปรไฟล์ GitHub",
+  },
+};

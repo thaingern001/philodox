@@ -75,3 +75,39 @@
 @media(max-width:800px){.hero-showcase{width:min(100%,560px);min-height:0;aspect-ratio:1.75;margin-top:30px}.showcase-orbit-svg{width:min(62%,290px)}}
 @media(max-width:560px){.hero-showcase{aspect-ratio:1.48;margin-top:25px}.showcase-orbit-svg{width:62%}.showcase-coordinate{display:none}.showcase-bottom{left:14px;right:12px;bottom:11px}.showcase-caption{max-width:calc(100% - 101px)}.showcase-caption strong{font-size:15px}.showcase-caption>span{font-size:12px}.showcase-meta{top:13px;left:14px}.showcase-controls button{width:44px;height:44px}}
 @media(prefers-reduced-motion:reduce){.showcase-image,.showcase-progress i,.showcase-controls button{transition:none!important}.showcase-orbit-a,.showcase-orbit-b,.showcase-core,.showcase-caption{animation:none!important}.showcase-image-layer,.showcase-orbit-svg,.showcase-core{transform:none!important}.showcase-core{transform:translate(-50%,-50%)!important}}
+
+/* Leaner editorial rhythm */
+.section{padding-block:clamp(66px,7vw,98px)}
+.section-heading{margin-bottom:42px}
+.steps-grid{margin-top:54px}
+.page-hero-inner{min-height:420px;padding-block:74px 82px}
+.contact-band-inner{padding-block:72px 82px}
+.contact-band h2{margin:50px 0 38px}
+.footer-top{padding-block:62px 72px}
+.studio-overview{background:var(--paper)}
+.studio-overview-head{border-top:1px solid var(--ink);display:flex;justify-content:space-between;gap:24px;padding:18px 0 48px;color:#68727f;font:600 11px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.11em;text-transform:uppercase}
+.studio-overview-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.studio-overview-grid article{padding:28px 9% 6px 0;min-height:300px}
+.studio-overview-grid article+article{border-left:1px solid var(--line);padding-left:9%;padding-right:0}
+.studio-overview-label{color:var(--accent);font:600 11px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.11em;text-transform:uppercase}
+.studio-overview h2{font-size:clamp(30px,3vw,44px);font-weight:600;letter-spacing:-.055em;line-height:1.12;margin:25px 0 16px;max-width:490px}
+.studio-overview p{font-size:16px;line-height:1.65;color:#59616e;max-width:480px;margin:0}
+.studio-overview .text-link{margin-top:28px}
+.process-bridge{background:var(--dark);color:#f7f7f2;padding-block:62px}
+.process-bridge-grid{display:grid;grid-template-columns:1fr 2fr auto;gap:36px;align-items:start}
+.process-bridge h2{font-size:clamp(28px,3vw,42px);letter-spacing:-.055em;font-weight:600;line-height:1.1;margin:0}
+.process-bridge p{font-size:16px;line-height:1.65;color:#adb5c1;max-width:660px;margin:17px 0 0}
+.process-bridge .text-link{margin-top:9px;white-space:nowrap}
+.home-approach{padding-block:72px}
+.home-approach .section-heading{margin-bottom:0}
+.home-approach .steps-grid{margin-top:38px}
+.home-approach .steps-grid li{min-height:170px}
+.home-approach .steps-grid h3{margin-top:24px}
+.home-approach .section-end{margin-top:10px}
+.studio-overview{padding-block:68px}
+.studio-overview-head{padding-bottom:30px}
+.studio-overview-grid article{min-height:245px}
+.contact-band-inner{padding-block:64px 72px}
+.contact-band h2{margin:38px 0 30px}
+@media(max-width:800px){.studio-overview-head{padding-bottom:28px}.process-bridge-grid{grid-template-columns:1fr 2fr}.process-bridge .text-link{grid-column:2;margin-top:0}}
+@media(max-width:560px){.section{padding-block:62px}.page-hero-inner{padding-block:66px}.contact-band-inner{padding-block:62px 70px}.footer-top{padding-block:55px 62px}.home-approach{padding-block:62px}.home-approach .steps-grid li{min-height:0}.studio-overview{padding-block:60px}.studio-overview-head{padding-bottom:20px}.studio-overview-head span:last-child{display:none}.studio-overview-grid{grid-template-columns:1fr}.studio-overview-grid article,.studio-overview-grid article+article{border-left:0;border-top:1px solid var(--line);padding:27px 0 30px;min-height:0}.studio-overview-grid article:first-child{border-top:0}.studio-overview h2{font-size:34px;margin:20px 0 12px}.studio-overview .text-link{margin-top:16px}.process-bridge{padding-block:54px}.process-bridge-grid{grid-template-columns:1fr;gap:18px}.process-bridge .text-link{grid-column:auto}}

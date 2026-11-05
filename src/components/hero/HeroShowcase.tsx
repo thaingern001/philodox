@@ -4,15 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback, useEffect, useRef, useState, type PointerEvent } from "react";
-import { copy } from "@/content/copy";
-import { pathFor, type Locale } from "@/content/config";
 
-const slides = [
-  { id: "software", image: "/images/hero/software.webp", serviceIndex: 0 },
-  { id: "ai", image: "/images/hero/ai.webp", serviceIndex: 1 },
-  { id: "data", image: "/images/hero/data.webp", serviceIndex: 2 },
-  { id: "consulting", image: "/images/hero/consulting.webp", serviceIndex: 3 },
-] as const;
+type Slide = { id: string; image: string; title: string; subtitle: string; href: string };
+type Labels = { label: string; previous: string; next: string; view: string };
 
 type ParallaxState = { x: number; y: number; targetX: number; targetY: number; frame: number };
 
@@ -38,8 +32,7 @@ function OrbitalOverlay() {
   </div>;
 }
 
-export function HeroShowcase({ locale }: { locale: Locale }) {
-  const t = copy[locale];
+export function HeroShowcase({ slides, labels }: { slides: Slide[]; labels: Labels }) {
   const [active, setActive] = useState(0);
   const [hovered, setHovered] = useState(false);
   const [focused, setFocused] = useState(false);
@@ -67,7 +60,7 @@ export function HeroShowcase({ locale }: { locale: Locale }) {
     if (hovered || focused || hidden || reducedMotion) return;
     const timer = window.setTimeout(() => setActive(index => (index + 1) % slides.length), 6000);
     return () => window.clearTimeout(timer);
-  }, [active, hovered, focused, hidden, reducedMotion]);
+  }, [active, hovered, focused, hidden, reducedMotion, slides.length]);
 
   const animateParallax = useCallback(function tick() {
     const state = parallax.current;
@@ -113,15 +106,12 @@ export function HeroShowcase({ locale }: { locale: Locale }) {
   }
 
   const current = slides[active];
-  const service = t.serviceList[current.serviceIndex];
-  const title = active === 3 ? t.home.showcase.finalTitle : service.homeTitle;
-  const subtitle = active === 3 ? t.home.showcase.finalSubtitle : service.homeDescription;
 
   return <div
     ref={root}
     className="hero-showcase"
     role="region"
-    aria-label={t.home.showcase.label}
+    aria-label={labels.label}
     onPointerEnter={event => { if (event.pointerType === "mouse") setHovered(true); }}
     onPointerMove={handlePointerMove}
     onPointerLeave={handlePointerLeave}
@@ -144,6 +134,6 @@ export function HeroShowcase({ locale }: { locale: Locale }) {
     <div className="showcase-tint" aria-hidden="true" />
     <OrbitalOverlay />
     <div className="showcase-meta"><span>{String(active + 1).padStart(2, "0")} / 04</span><div className="showcase-progress" aria-hidden="true">{slides.map((slide, index) => <i key={slide.id} className={index === active ? "is-active" : ""} />)}</div></div>
-    <div className="showcase-bottom"><div className="showcase-caption" key={current.id}><Link href={`${pathFor(locale, "services")}#${current.id}`} aria-label={`${t.home.showcase.view}: ${title}`}><strong>{title}</strong><ArrowUpRight size={18} aria-hidden="true" /></Link><span>{subtitle}</span></div><div className="showcase-controls"><button type="button" onClick={() => setActive(index => (index - 1 + slides.length) % slides.length)} aria-label={t.home.showcase.previous}><ChevronLeft size={19} aria-hidden="true" /></button><button type="button" onClick={() => setActive(index => (index + 1) % slides.length)} aria-label={t.home.showcase.next}><ChevronRight size={19} aria-hidden="true" /></button></div></div>
+    <div className="showcase-bottom"><div className="showcase-caption" key={current.id}><Link href={current.href} aria-label={`${labels.view}: ${current.title}`}><strong>{current.title}</strong><ArrowUpRight size={18} aria-hidden="true" /></Link><span>{current.subtitle}</span></div><div className="showcase-controls"><button type="button" onClick={() => setActive(index => (index - 1 + slides.length) % slides.length)} aria-label={labels.previous}><ChevronLeft size={19} aria-hidden="true" /></button><button type="button" onClick={() => setActive(index => (index + 1) % slides.length)} aria-label={labels.next}><ChevronRight size={19} aria-hidden="true" /></button></div></div>
   </div>;
 }

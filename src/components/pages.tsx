@@ -1,19 +1,27 @@
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, CircleDot, MoveUpRight, SlidersHorizontal, UsersRound, Zap } from "lucide-react";
 import { copy } from "@/content/copy";
-import { pathFor, site, type Locale } from "@/content/config";
+import { pathFor, showcaseImages, site, type Locale } from "@/content/config";
 import { ButtonLink, ContactBand, PageHero, SectionHeading, serviceIcons, Steps } from "./site";
 import { HeroShowcase } from "./hero/HeroShowcase";
 
 export function HomePage({ locale }: { locale: Locale }) {
   const t = copy[locale];
+  const heroSlides = showcaseImages.map(({ id, image, serviceIndex }) => {
+    const service = t.serviceList[serviceIndex];
+    return {
+      id, image,
+      title: serviceIndex === 3 ? t.home.showcase.finalTitle : service.homeTitle,
+      subtitle: serviceIndex === 3 ? t.home.showcase.finalSubtitle : service.homeDescription,
+      href: `${pathFor(locale, "services")}#${id}`,
+    };
+  });
   return <main id="main">
-    <section className="home-hero"><div className="shell home-hero-inner"><div className="home-hero-copy"><div className="eyebrow"><span className="eyebrow-square"/>{t.home.eyebrow}</div><h1>{t.home.hero}</h1><p>{t.home.intro}</p><div className="hero-actions"><ButtonLink href={pathFor(locale, "services")}>{t.common.explore}</ButtonLink><ButtonLink href={pathFor(locale, "contact")} secondary>{t.common.talk}</ButtonLink></div></div><HeroShowcase locale={locale} /></div></section>
+    <section className="home-hero"><div className="shell home-hero-inner"><div className="home-hero-copy"><div className="eyebrow"><span className="eyebrow-square"/>{t.home.eyebrow}</div><h1>{t.home.hero}</h1><p>{t.home.intro}</p><div className="hero-actions"><ButtonLink href={pathFor(locale, "services")}>{t.common.explore}</ButtonLink><ButtonLink href={pathFor(locale, "contact")} secondary>{t.common.talk}</ButtonLink></div></div><HeroShowcase slides={heroSlides} labels={t.home.showcase} /></div></section>
     <section className="home-service-section"><div className="shell"><div className="home-service-heading"><h2>{t.home.servicesEyebrow}</h2><span>{t.home.servicesCount}</span></div><div className="home-service-grid">{t.serviceList.map((s, i) => { const Icon = serviceIcons[i]; return <Link key={s.id} href={`${pathFor(locale, "services")}#${s.id}`} className="home-service-card"><span className="home-service-icon"><Icon size={26} strokeWidth={1.35} aria-hidden="true" /></span><strong>{s.homeTitle}</strong><p>{s.homeDescription}</p><ArrowUpRight className="home-service-arrow" size={20} strokeWidth={1.8} aria-hidden="true" /></Link>; })}</div></div></section>
     <section className="why-section"><div className="shell why-grid"><div className="why-intro"><div className="eyebrow">{t.home.whyEyebrow}</div><h2>{t.home.whyHeading}</h2></div><div className="why-items">{t.home.why.map((item, i) => { const Icon = [UsersRound, Zap, SlidersHorizontal][i]; return <article key={item.title}><Icon size={28} strokeWidth={1.35} aria-hidden="true" /><h3>{item.title}</h3><p>{item.text}</p></article>; })}</div></div></section>
-    <section className="section dark-section"><div className="shell"><SectionHeading index="03" eyebrow={t.nav.approach} title={t.home.approachHeading} intro={t.home.approachIntro} light/><Steps locale={locale}/><div className="section-end"><Link className="text-link light-link" href={pathFor(locale, "approach")}>{t.common.learn}<ArrowUpRight size={17} aria-hidden="true" /></Link></div></div></section>
-    <section className="section venture-feature"><div className="shell venture-feature-grid"><div><SectionHeading index="04" eyebrow={t.nav.ventures} title={t.home.ventureHeading} intro={t.home.ventureText}/><ButtonLink href={pathFor(locale, "ventures")} secondary>{t.common.direction}</ButtonLink></div><div className="venture-art" aria-hidden="true"><div className="venture-art-grid"/><div className="venture-arc a"/><div className="venture-arc b"/><div className="venture-arc c"/><div className="venture-point p1"/><div className="venture-point p2"/><div className="venture-point p3"/><span>EXPLORE / 04</span></div></div></section>
-    <section className="section about-feature"><div className="shell about-feature-grid"><div className="about-index">P<span>.</span><small>{site.tagline}</small></div><div><SectionHeading index="05" eyebrow={t.nav.about} title={t.home.aboutHeading} intro={t.home.aboutText}/><ButtonLink href={pathFor(locale, "about")} secondary>{t.common.about}</ButtonLink></div></div></section>
+    <section className="section dark-section home-approach"><div className="shell"><SectionHeading index="03" eyebrow={t.nav.approach} title={t.home.approachHeading} intro={t.home.approachIntro} light/><Steps locale={locale}/><div className="section-end"><Link className="text-link light-link" href={pathFor(locale, "approach")}>{t.common.learn}<ArrowUpRight size={17} aria-hidden="true" /></Link></div></div></section>
+    <section className="section studio-overview"><div className="shell"><div className="studio-overview-head"><span>04 — 05 / PHILODOX</span><span>{site.tagline}</span></div><div className="studio-overview-grid"><article><span className="studio-overview-label">04 / {t.nav.ventures}</span><h2>{t.home.ventureHeading}</h2><p>{t.home.ventureText}</p><Link className="text-link" href={pathFor(locale, "ventures")}>{t.common.direction}<ArrowUpRight size={17} aria-hidden="true" /></Link></article><article><span className="studio-overview-label">05 / {t.nav.about}</span><h2>{t.home.aboutHeading}</h2><p>{t.home.aboutText}</p><Link className="text-link" href={pathFor(locale, "about")}>{t.common.about}<ArrowUpRight size={17} aria-hidden="true" /></Link></article></div></div></section>
     <ContactBand locale={locale}/>
   </main>;
 }
@@ -23,7 +31,7 @@ export function ServicesPage({ locale }: { locale: Locale }) {
   return <main id="main"><PageHero index="01" eyebrow={t.nav.services} title={s.hero} intro={s.intro} graphic />
     <section className="section paper-section"><div className="shell"><SectionHeading index="01" eyebrow={s.overview} title={s.detailHeading} intro={s.detailIntro}/><nav className="service-index" aria-label={s.overview}>{t.serviceList.map((item,i) => <a href={`#${item.id}`} key={item.id}><span>0{i+1}</span>{item.title}<ArrowUpRight size={16} aria-hidden="true" /></a>)}</nav></div></section>
     <section className="white-section"><div className="shell">{t.serviceList.map((item,i) => { const Icon = serviceIcons[i]; return <article className="service-detail" id={item.id} key={item.id}><div className="service-detail-label"><span>0{i+1} / 05</span><Icon size={32} strokeWidth={1.2} aria-hidden="true" /></div><div className="service-detail-body"><h2>{item.title}</h2><p className="lead">{item.detail}</p><div className="service-detail-lists"><div><h3>{s.examples}</h3><ul>{item.examples.map(x=><li key={x}>{x}</li>)}</ul></div><div><h3>{s.outcomes}</h3><ul>{item.outcomes.map(x=><li key={x}>{x}</li>)}</ul></div></div></div></article>})}</div></section>
-    <section className="section dark-section"><div className="shell"><SectionHeading index="02" eyebrow={t.nav.approach} title={s.processHeading} intro={s.processText} light/><Steps locale={locale}/></div></section>
+    <section className="process-bridge"><div className="shell process-bridge-grid"><div className="section-kicker light"><span>02</span><span>{t.nav.approach}</span></div><div><h2>{s.processHeading}</h2><p>{s.processText}</p></div><Link className="text-link light-link" href={pathFor(locale, "approach")}>{t.nav.approach}<ArrowUpRight size={17} aria-hidden="true" /></Link></div></section>
     <section className="section paper-section"><div className="shell"><SectionHeading index="03" eyebrow={locale === "en" ? "Collaboration" : "การร่วมงาน"} title={s.modelsHeading} intro={s.modelsIntro}/><div className="model-grid">{s.models.map((m,i) => <article key={m.title}><span>0{i+1} / 04</span><h3>{m.title}</h3><p>{m.text}</p></article>)}</div></div></section><ContactBand locale={locale}/>
   </main>;
 }

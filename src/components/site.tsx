@@ -1,29 +1,27 @@
 import Link from "next/link";
-import { ArrowDownRight, ArrowRight, Asterisk, Braces, ChartNoAxesCombined, Compass, Layers3, MoveUpRight, Network, ScanSearch } from "lucide-react";
+import { ArrowDownRight, ArrowRight, Asterisk, Braces, ChartNoAxesCombined, Compass, Layers3, Network, ScanSearch } from "lucide-react";
 import { copy } from "@/content/copy";
-import { pathFor, pages, type Locale, type PageKey } from "@/content/config";
+import { pathFor, pages, sectionFor, site, type Locale } from "@/content/config";
+import { SectionNavigation } from "./SectionNavigation";
 
 export function Mark({ inverse = false }: { inverse?: boolean }) {
   return <span className={`brand-lockup ${inverse ? "inverse" : ""}`}><svg className="brand-symbol" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M7 7h17c9.4 0 17 7.6 17 17S33.4 41 24 41H7V7Z" stroke="currentColor" strokeWidth="3"/><path d="M7 24h34M24 7v34" stroke="currentColor" strokeWidth="3"/><circle cx="24" cy="24" r="4" fill="var(--accent)"/></svg><span>philodox<span className="brand-period">.</span></span></span>;
 }
 
-export function Header({ locale, current }: { locale: Locale; current: PageKey }) {
+export function Header({ locale }: { locale: Locale }) {
   const t = copy[locale];
-  const other: Locale = locale === "en" ? "th" : "en";
   return <>
     <a className="skip-link" href="#main">{t.skip}</a>
     <header className="site-header"><div className="shell header-inner">
-      <Link href={pathFor(locale)} aria-label={`Philodox — ${t.nav.home}`}><Mark /></Link>
-      <nav className="desktop-nav" aria-label={locale === "en" ? "Primary navigation" : "เมนูหลัก"}>{pages.map(p => <Link key={p} href={pathFor(locale, p)} aria-current={p === current ? "page" : undefined} className={p === "contact" ? "nav-contact" : ""}>{t.nav[p]}{p === "contact" && <MoveUpRight size={14} aria-hidden="true" />}</Link>)}</nav>
-      <div className="header-actions"><Link className="language-link" href={pathFor(other, current)} lang={other} hrefLang={other} aria-label={`${t.langLabel}: ${other === "en" ? "English" : "ไทย"}`}>{other.toUpperCase()}</Link>
-      <details className="mobile-menu"><summary aria-label={t.menu}><span className="menu-bars" aria-hidden="true"><span/><span/></span></summary><nav aria-label={locale === "en" ? "Mobile navigation" : "เมนูมือถือ"}>{pages.map(p => <Link key={p} href={pathFor(locale, p)} aria-current={p === current ? "page" : undefined}>{t.nav[p]}<ArrowRight size={18} aria-hidden="true" /></Link>)}<Link className="mobile-lang" href={pathFor(other, current)} lang={other} hrefLang={other}>{other === "en" ? "English" : "ไทย"}</Link></nav></details></div>
+      <Link href={sectionFor(locale)} aria-label={`Philodox — ${t.nav.home}`}><Mark /></Link>
+      <SectionNavigation locale={locale} labels={t.nav} languageLabel={t.langLabel} menuLabel={t.menu} />
     </div></header>
   </>;
 }
 
-export function Footer({ locale, current }: { locale: Locale; current: PageKey }) {
-  const t = copy[locale]; const other = locale === "en" ? "th" : "en";
-  return <footer className="site-footer"><div className="shell footer-top"><div><Link href={pathFor(locale)} aria-label="Philodox home"><Mark inverse /></Link><p>{t.common.footer}</p></div><nav aria-label={locale === "en" ? "Footer navigation" : "เมนูส่วนท้าย"}>{pages.map(p => <Link key={p} href={pathFor(locale, p)}>{t.nav[p]}</Link>)}</nav><div className="footer-language"><span>{t.langLabel}</span><Link href={pathFor(other, current)} lang={other} hrefLang={other}>{other === "en" ? "English" : "ไทย"} <ArrowRight size={16} aria-hidden="true" /></Link></div></div><div className="shell footer-bottom"><span>© {new Date().getFullYear()} Philodox</span><span>Independent by design <span className="blue-dot">●</span> Curious by nature</span></div></footer>;
+export function Footer({ locale }: { locale: Locale }) {
+  const t = copy[locale];
+  return <footer className="site-footer"><div className="shell footer-top"><div><Link href={sectionFor(locale)} aria-label="Philodox home"><Mark inverse /></Link><p>{t.common.footer}</p></div><nav aria-label={locale === "en" ? "Footer navigation" : "เมนูส่วนท้าย"}>{pages.map(p => <Link key={p} href={sectionFor(locale, p)}>{t.nav[p]}</Link>)}</nav></div><div className="shell footer-bottom"><span>© {new Date().getFullYear()} Philodox</span><span>{site.tagline}</span></div></footer>;
 }
 
 export function ButtonLink({ href, children, secondary = false, inverse = false }: { href: string; children: React.ReactNode; secondary?: boolean; inverse?: boolean }) {
